@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon src/server.js",
-    "start": "npx prisma generate && npx prisma migrate deploy && node src/server.js",
+    "start": "npx prisma migrate reset --force && node src/server.js",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",
     "db:seed": "node src/utils/seed.js",
